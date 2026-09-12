@@ -4,6 +4,7 @@ import { formatDate, readingTimeLabel } from '@/lib/format';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollTopButton from '@/components/ScrollTopButton';
+import TableOfContents from '@/components/TableOfContents';
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -51,6 +52,8 @@ export default async function ArticlePage({ params }) {
             ))}
           </div>
         )}
+
+        <TableOfContents items={post.tableOfContents} />
 
         <article className="prose" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
       </main>
