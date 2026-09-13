@@ -23,7 +23,7 @@ export default function HomePage() {
           <ul className="post-list">
             {posts.map((post) => (
               <li key={post.slug} className="post-item">
-                <Link href={`/articles/${post.slug}`} className="post-link">
+                <Link href={`/${post.slug}`} className="post-link">
                   <h2 className="post-title">{post.title}</h2>
                   {post.excerpt && <p className="post-excerpt">{post.excerpt}</p>}
                   <div className="post-meta">
