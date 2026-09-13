@@ -406,7 +406,7 @@ a {
   color: var(--text);
   max-width: 68ch;
   text-align: justify;
-  /* text-indent: 1.2rem; */
+  text-indent: 1.2rem;
 }
 
 .prose p:has(> img:only-child) {
