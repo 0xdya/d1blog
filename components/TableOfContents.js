@@ -1,10 +1,11 @@
+
 function TocItems({ items }) {
   return (
     <ul className="toc-list">
       {items.map((item) => (
         <li key={item.id} className={`toc-item toc-level-${item.level}`}>
           {item.children.length > 0 ? (
-            <details>
+            <details open>
               <summary>
                 <a href={`#${item.id}`}>{item.text}</a>
               </summary>
@@ -24,7 +25,7 @@ export default function TableOfContents({ items }) {
 
   return (
     <nav className="table-of-contents" aria-label="فهرس المقال">
-      <h2>فهرس المقال</h2>
+      <h2> الفهرس</h2>
       <TocItems items={items} />
     </nav>
   );
