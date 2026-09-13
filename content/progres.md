@@ -53,7 +53,7 @@ excerpt: تحليل مشكلة This app won t work for your device فبلاي س
 
  وكتبها بالظبط هكا (ادا باغي تفهم هادي واش معناها، هادي ببساطة تخدع التطبيق وتحقنه لداخل بـ  com.android.vending لي كي تكون حصرًا فالتطبيقات المتثبتة من بلاي ستور.)
 
-```
+```js
  com.android.vending
 ```
 

@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollTopButton from '@/components/ScrollTopButton';
 import TableOfContents from '@/components/TableOfContents';
+import CodeBlocks from '@/components/CodeBlocks';
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -55,7 +56,9 @@ export default async function ArticlePage({ params }) {
 
         <TableOfContents items={post.tableOfContents} />
 
-        <article className="prose" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+        <article className="prose">
+          <CodeBlocks html={post.contentHtml} />
+        </article>
       </main>
 
       <Footer />
