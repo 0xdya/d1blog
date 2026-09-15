@@ -36,7 +36,7 @@ export default function CodeBlocks({ html }) {
     codeBlocks?.forEach((pre) => {
       const buttonContainer = document.createElement('span');
       const root = createRoot(buttonContainer);
-      root.render(<CopyButton code={pre.textContent || ''} />);
+      root.render(<CopyButton code={(pre.textContent || '').trimEnd()} />);
       pre.appendChild(buttonContainer);
       roots.push(root);
     });

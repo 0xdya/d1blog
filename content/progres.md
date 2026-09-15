@@ -29,7 +29,7 @@ excerpt: تحليل مشكلة This app won t work for your device فبلاي س
 
 كاين 3 حلول قاع مضمونين، واحد سريع ومباشر لناس العاديين وزوج حلول جذرية واحد فيهم لصحاب الروت وزاوج لناس العادية بصح فيه شوية خدمة...
 
-## الحل الأول - الحل السريع لناس العادين -
+## الحل الأول - السريع لناس العادين -
 
 بعد بحث طويل وتجارب كثيرة لقيت أنه التحقق من التطبيق متثبت من بلاي سطور زادوه فقط من تحديث 1.8.0 وطلع، والحل ببساطة انك تلشارجي نسخة من 1.8.0 وهود (وغادي تقدر تسجل بحسابك عادي والنقاط والمعلومات يطلعو بشكل طبيعي)
 
@@ -41,7 +41,7 @@ excerpt: تحليل مشكلة This app won t work for your device فبلاي س
 
 ## الحل الثاني - لصحاب الروت root -
 
-تلشارجي آخر نسخة من [progres webetu](https://progres-webetu.fr.softonic.com/android) بلا متأنسطاليها،
+تلشارجي آخر نسخة من [progres webetu](https://apkpure.com/fr/progres-webetu/app.progres.webetu/download) بلا متأنسطاليها،
 وتلشارجي تطبيق [Install With Options](https://github.com/zacharee/InstallWithOptions/releases) دخل وعطيه صلاحيات الروت
 هبط لتحت وفعل هادي
 
@@ -53,8 +53,8 @@ excerpt: تحليل مشكلة This app won t work for your device فبلاي س
 
  وكتبها بالظبط هكا (ادا باغي تفهم هادي واش معناها، هادي ببساطة تخدع التطبيق وتحقنه لداخل بـ  com.android.vending لي كي تكون حصرًا فالتطبيقات المتثبتة من بلاي ستور.)
 
-```js
- com.android.vending
+```
+com.android.vending
 ```
 
 مبعدا اك تلقا لتحت بلاصة تختار فيها ملف تطبيق بروقرس (غالبًا يكون بصيغة xapk) 
