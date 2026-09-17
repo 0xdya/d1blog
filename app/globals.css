@@ -153,15 +153,24 @@ a {
   gap: 0;
 }
 
-.site-logo img {
+.site-logo {
+  -webkit-user-select: none;
   user-select: none;
-  border: none;
-  display: block;
-  width: 7rem;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent; /* هذا يشيل التحديد/الهايلايت الرمادي عند الضغط بالموبايل */
+  touch-action: manipulation; /* يمنع الزوم/التحديد الطويل، يخلي بس tap عادي */
+  display: inline-block;
+
+  /* border: 1px solid red; */
+  /* display: block; */
+  width: 120px;
+  height: 56px;
   padding: var(--space-2) 0;
-  /* height: 78px; */
-  
-  /* object-fit: contain; */
+  background-image: url(/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 .site-name {

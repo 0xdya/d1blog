@@ -13,7 +13,7 @@ export default function Header({ backHref }) {
             {site.title}
           </Link> */}
           <Link href="/" className="site-logo" aria-label={`${site.title} home`}>
-            <Image src="/logo.png" alt="" width={40} height={40} priority />
+            {/* <Image src="/logo.png" draggable={false} alt="" width={40} height={40} priority onContextMenu={(e) => e.preventDefault()} /> */}
           </Link>
         </div>
       </div>
