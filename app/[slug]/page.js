@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import ScrollTopButton from '@/components/ScrollTopButton';
 import TableOfContents from '@/components/TableOfContents';
 import CodeBlocks from '@/components/CodeBlocks';
+import { site } from '@/lib/site';
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -14,9 +15,34 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   try {
     const post = await getPostBySlug(params.slug);
+    const image = post.image || '/opengraph-image.png';
+    const url = `${site.url}/${post.slug}`;
+
     return {
-      title: post.title,
+      title: { absolute: post.title },
       description: post.excerpt,
+      alternates: {
+        canonical: url,
+      },
+      openGraph: {
+        title: post.title,
+        description: post.excerpt,
+        url,
+        type: 'article',
+        publishedTime: post.date || undefined,
+        authors: [site.owner],
+        images: [{
+          url: image,
+          alt: post.title,
+        }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: post.title,
+        description: post.excerpt,
+        creator: site.twitterHandle,
+        images: [image],
+      },
     };
   } catch {
     return {};
