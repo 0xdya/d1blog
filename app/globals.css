@@ -111,6 +111,7 @@ html {
 }
 
 body {
+  min-height: 100vh;
   margin: 0;
   background: var(--bg);
   color: var(--text);
@@ -136,8 +137,9 @@ a {
 .container {
   width: 100%;
   max-width: 900px;
-  margin-inline: auto;
+  /* margin-inline: auto; */
   padding-inline: var(--space-5);
+  margin: 0 auto var(--space-7);
 }
 
 .site-header {
@@ -283,10 +285,11 @@ a {
 .post-link {
   display: block;
   padding: var(--space-2) var(--space-3);
+  margin: 0 auto;
   border: 1px solid var(--border);
   border-radius: 10px;
   transition: background-color 120ms ease;
-  
+  max-width: 720px;
 }
 
 .post-link:hover {
@@ -305,17 +308,24 @@ a {
   color: var(--text-dim);
   font-size: var(--text-sm);
   line-height: 1.85;
-  max-width: 65ch;
+  /* max-width: 65ch; */
 }
 
 .post-meta {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
+  flex-direction: column;
   gap: var(--space-2);
   color: var(--text-faint);
   font-size: var(--text-xs);
   border-top: 1px dotted var(--border);
   padding-top: var(--space-2);
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+}
 }
 
 .post-meta .dot {
@@ -619,10 +629,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-block-start: auto;
+  margin-top: auto;
   border-top: 1px solid var(--border);
   padding: var(--space-5);
   font-size: var(--text-sm);
+  /* margin-top: var(--space-6); */
   text-align: center;
 }
 

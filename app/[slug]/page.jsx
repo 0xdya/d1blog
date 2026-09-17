@@ -7,6 +7,7 @@ import ScrollTopButton from '@/components/ScrollTopButton';
 import TableOfContents from '@/components/TableOfContents';
 import CodeBlocks from '@/components/CodeBlocks';
 import { site } from '@/lib/site';
+import { Clock3, PencilLine } from 'lucide-react';
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -65,9 +66,8 @@ export default async function ArticlePage({ params }) {
         <h1 className="article-title">{post.title}</h1>
 
         <div className="post-meta">
-          {post.date && <time dateTime={post.date}>{formatDateWithRelativeTime(post.date)}</time>}
-          |
-          <span>{readingTimeLabel(post.readingMinutes)}</span>
+          {post.date && <time dateTime={post.date}><PencilLine size={12} /> {formatDateWithRelativeTime(post.date)}</time>}
+          <span><Clock3 size={12} style={{ marginTop: "-2px" }} /> {readingTimeLabel(post.readingMinutes)}</span>
         </div>
 
         {post.tags.length > 0 && (
