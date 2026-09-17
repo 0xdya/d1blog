@@ -34,7 +34,6 @@ export const metadata = {
     canonical: '/',
   },
 
-  // كيفاش تظهر عند مشاركة الرابط (فيسبوك، واتساب، لينكدإن...)
   openGraph: {
     title: site.title,
     description: site.description,

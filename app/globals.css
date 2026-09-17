@@ -12,7 +12,6 @@
   max-width: 60ch;
 }
 
-
 :root {
   --space-1: 4px;
   --space-2: 8px;
@@ -34,10 +33,12 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 
   --bg: #ffffff;
+  --bg-reverse: #080808;
   --bg-raised: #f6f6f6;
   --border: #e6e6e6;
   --border-hover: #d0d0d0;
   --text: #1a1a1a;
+  --text-reverse: #ededed;
   --text-dim: #5c5c5c;
   --text-faint: #8f8f8f;
   --link: #1a1a1a;
@@ -49,9 +50,11 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     --bg: #080808;
+    --bg-reverse: #ffffff;
     --bg-raised: #131313;
    --border: #1a1a1a;
     --border-hover: #3a3a3a;
+    --text-reverse: #1a1a1a;
     --text: #ededed;
     --text-dim: #9a9a9a;
     --text-faint: #6b6b6b;
@@ -64,9 +67,11 @@
 
 :root[data-theme='dark'] {
   --bg: #080808;
+  --bg-reverse: #ffffff;
   --bg-raised: #131313;
  --border: #1a1a1a;
   --border-hover: #3a3a3a;
+  --text-reverse: #1a1a1a;
   --text: #ededed;
   --text-dim: #9a9a9a;
   --text-faint: #6b6b6b;
@@ -78,10 +83,12 @@
 
 :root[data-theme='light'] {
   --bg: #ffffff;
+  --bg-reverse: #080808;
   --bg-raised: #f6f6f6;
   --border: #999;
   --border-hover: #d0d0d0;
   --text: #1a1a1a;
+  --text-reverse: #ededed;
   --text-dim: #5c5c5c;
   --text-faint: #8f8f8f;
   --link: #1a1a1a;
@@ -92,6 +99,11 @@
 
 * {
   box-sizing: border-box;
+}
+
+::selection {
+    background: var(--bg-reverse);
+    color: var(--text-reverse);
 }
 
 html {
@@ -132,13 +144,15 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: var(--bg);
+  /* background: var(--bg); */
+  backdrop-filter: blur(12px);
+  /* background-color: #08080811; */
   border-block-end: 1px solid var(--border);
 }
 
 .site-header-inner {
   width: 100%;
-  max-width: 720px;
+  max-width: 900px;
   margin-inline: auto;
   padding: var(--space-4) var(--space-5);
   display: flex;
@@ -215,6 +229,7 @@ a {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 2px;
+  /* background: var(--bg); */
 }
 
 .theme-toggle button {
@@ -440,7 +455,7 @@ a {
 .prose p {
   margin: var(--space-2) 0;
   color: var(--text);
-  max-width: 68ch;
+  /* max-width: 68ch; */
   text-align: justify;
   text-indent: 1.2rem;
 }
@@ -472,17 +487,19 @@ a {
 }
 
 .prose blockquote {
-  margin: var(--space-8) 0;
+  margin: var(--space-5) 0;
   padding: var(--space-1) var(--space-3);
   /* padding-inline-start: var(--space-4); */
-  border-inline-start: var(--space-1) solid var(--border);
+  border-inline-start: var(--space-2) solid var(--border);
   color: var(--text-dim);
-  background: var(--bg-raised);
+  background: transparent;
 }
 
 img {
   width: 100%;
   height: auto;
+  max-height: 50vh;
+  object-fit: contain;
   text-indent: 22rem !important;
   border-radius: 8px;
   border: 1px solid var(--border);
