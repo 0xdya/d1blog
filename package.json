@@ -15,7 +15,8 @@
     "react-dom": "^18.3.1",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.0",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "time-ar": "^2.1.0"
   },
   "devDependencies": {
     "serve": "^14.2.6"
