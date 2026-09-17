@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getAllSlugs, getPostBySlug } from '@/lib/posts';
-import { formatDate, readingTimeLabel } from '@/lib/format';
+import { formatDateWithRelativeTime, readingTimeLabel } from '@/lib/format';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollTopButton from '@/components/ScrollTopButton';
@@ -39,8 +39,8 @@ export default async function ArticlePage({ params }) {
         <h1 className="article-title">{post.title}</h1>
 
         <div className="post-meta">
-          {post.date && <time dateTime={post.date}>{formatDate(post.date)}</time>}
-          <span className="dot" aria-hidden="true" />
+          {post.date && <time dateTime={post.date}>{formatDateWithRelativeTime(post.date)}</time>}
+          |
           <span>{readingTimeLabel(post.readingMinutes)}</span>
         </div>
 

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/posts';
-import { formatDate, readingTimeLabel } from '@/lib/format';
+import { formatDateWithRelativeTime, readingTimeLabel } from '@/lib/format';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { site } from '@/lib/site';
@@ -17,7 +17,7 @@ export default function HomePage() {
 
         {posts.length === 0 ? (
           <p className="empty">
-            لا توجد مقالات بعد. أضف ملف Markdown جديد داخل مجلد content.
+            لا توجد مقالات بعد.
           </p>
         ) : (
           <ul className="post-list">
@@ -30,8 +30,7 @@ export default function HomePage() {
                     <span>{readingTimeLabel(post.readingMinutes)}</span>
                     {post.date && (
                       <>
-                        <span className="dot" aria-hidden="true" />
-                        <time dateTime={post.date}>{formatDate(post.date)}</time>
+                        <time dateTime={post.date}>{formatDateWithRelativeTime(post.date)}</time>
                       </>
                     )}
                   </div>
