@@ -1,7 +1,7 @@
 ---
-title:  الحل الجذري لمشكلة توافق تطبيق PROGRES WebEtu
+title:  الحلول الجذرية لعدم توافق progres webetu
 date: 2026-09-13
-excerpt: تحليل مشكلة This app won t work for your device فبلاي ستور عند محاولة تثبيت تطبيق بروغرس الجامعي.
+excerpt: تحليل مشكلة هدا التطبيق لا يتوافق مع جهازك (This app won t work for your device) فبلاي ستور.
 # tags: [شرح]
 ---
 

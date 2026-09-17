@@ -11,11 +11,11 @@
   --space-8: 64px;
   --space-9: 96px;
 
---text-xs: 0.875rem;
---text-sm: 1rem;
---text-base: 1.125rem;
---text-lg: 1.35rem;
---text-xl: 1.6rem;
+    --text-xs: 0.78rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.2rem;
+    --text-xl: 1.45rem;
 
   --font-default: 'Handjet';
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
@@ -37,7 +37,7 @@
   :root:not([data-theme='light']) {
     --bg: #0a0a0a;
     --bg-raised: #131313;
-    --border: #262626;
+   --border: #1a1a1a;
     --border-hover: #3a3a3a;
     --text: #ededed;
     --text-dim: #9a9a9a;
@@ -52,7 +52,7 @@
 :root[data-theme='dark'] {
   --bg: #0a0a0a;
   --bg-raised: #131313;
-  --border: #262626;
+ --border: #1a1a1a;
   --border-hover: #3a3a3a;
   --text: #ededed;
   --text-dim: #9a9a9a;
@@ -234,8 +234,8 @@ a {
 .post-link {
   display: block;
   padding: var(--space-2) var(--space-3);
-  border: 1px dashed var(--border);
-  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
   transition: background-color 120ms ease;
   
 }
@@ -246,7 +246,7 @@ a {
 
 .post-title {
   margin: 0 0 var(--space-2);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   font-weight: 600;
   color: var(--text);
 }
@@ -265,6 +265,8 @@ a {
   gap: var(--space-2);
   color: var(--text-faint);
   font-size: var(--text-xs);
+  border-top: 1px dotted var(--border);
+  padding-top: var(--space-2);
 }
 
 .post-meta .dot {
