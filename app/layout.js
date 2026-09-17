@@ -17,12 +17,60 @@ const monoFont = JetBrains_Mono({
   display: 'swap',
 });
 
+
 export const metadata = {
+  metadataBase: new URL(site.url),
+
   title: {
     default: site.title,
     template: `%s — ${site.title}`,
   },
   description: site.description,
+  keywords: site.keywords,
+  authors: [{ name: site.owner }],
+  creator: site.owner,
+
+  alternates: {
+    canonical: '/',
+  },
+
+  // كيفاش تظهر عند مشاركة الرابط (فيسبوك، واتساب، لينكدإن...)
+  openGraph: {
+    title: site.title,
+    description: site.description,
+    url: site.url,
+    siteName: site.title,
+    locale: site.locale,
+    type: 'website',
+    images: ['/opengraph-image.png'],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: site.title,
+    description: site.description,
+    creator: site.twitterHandle,
+    images: ['/opengraph-image.png'],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+    },
+  },
+
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    shortcut: '/favicon.ico',
+  },
+
 };
 
 export default function RootLayout({ children }) {

@@ -48,7 +48,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --bg: #0a0a0a;
+    --bg: #080808;
     --bg-raised: #131313;
    --border: #1a1a1a;
     --border-hover: #3a3a3a;
@@ -63,7 +63,7 @@
 }
 
 :root[data-theme='dark'] {
-  --bg: #0a0a0a;
+  --bg: #080808;
   --bg-raised: #131313;
  --border: #1a1a1a;
   --border-hover: #3a3a3a;
@@ -154,6 +154,7 @@ a {
 }
 
 .site-logo img {
+  user-select: none;
   border: none;
   display: block;
   width: 7rem;
