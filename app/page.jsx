@@ -32,12 +32,12 @@ export default function HomePage() {
 
                   <div className="post-meta">
                     <span>
-                      <Clock3 size={12} style={{ marginTop: "-2px" }} /> {readingTimeLabel(post.readingMinutes)}
+                      <Clock3 size={12} /> {readingTimeLabel(post.readingMinutes)}
                     </span>
                     {post.date && (
                       <>
                         <time dateTime={post.date}>
-                          <PencilLine size={12} /> {formatDateWithRelativeTime(post.date)}
+                          <PencilLine size={12} style={{ marginBottom: "-1px" }} /> {formatDateWithRelativeTime(post.date)}
                         </time>
                       </>
                     )}
