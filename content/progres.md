@@ -67,7 +67,7 @@ com.android.vending
 الحل الثالث هو نفس خطوات تع الروت، تلشارجي تطبيق [Install With Options](https://github.com/zacharee/InstallWithOptions/releases) بصح كاين طريقة أنك تخدمه عبر شيزوكو (الشيزوكو هو مشابه للروت بحيث يعطي صلاحيات التحكم فملفات النظام بصح بشكل مبسط وسهل وبلا تعقيدات)
 
 وتفعيل الشيزوكو كاين زوج طرق شوف لي تناسبك
-1. الطريقة الاولى بلا pc [هاهو مقطع فيوتيوب](https://youtu.be/ZxjelegpTLA) (ادا كان تلفونك من شاومي تستحق خطوات اضافية [هاهو المقطع فيوتيوب](https://youtu.be/3dEZT-u45mQ?si=sZITW4fzRcifU6NL))
+1. الطريقة الاولى بلا pc [هاهو مقطع فيوتيوب](https://youtu.be/XmzaobLBBLw?si=ZATWGyhRspOLLiIG) (ادا كان تلفونك من شاومي تستحق خطوات اضافية [هاهو المقطع فيوتيوب](https://youtu.be/3dEZT-u45mQ?si=sZITW4fzRcifU6NL))
 
 2. عبر pc [هاهو مقطع فيوتيوب](https://www.youtube.com/watch?v=ZxjelegpTLA)
 
