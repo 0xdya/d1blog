@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
     <html
       lang="ar"
       dir="rtl"
-      className={`${arabicFont.variable} ${monoFont.variable}`}
+      // className={`${arabicFont.variable} ${monoFont.variable}`}
       suppressHydrationWarning
     >
       <head>
