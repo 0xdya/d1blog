@@ -2,9 +2,6 @@
 
 import { useEffect, useRef } from 'react';
 
-
-// const GISCUS_LIGHT = 'https://d1blog.vercel.app/giscus-light.css';
-// const GISCUS_DARK = 'https://d1blog.vercel.app/giscus-dark.css';
 const GISCUS_LIGHT = 'light';
 const GISCUS_DARK = 'dark';
 
@@ -46,10 +43,24 @@ export default function Comments() {
         script.setAttribute('data-reactions-enabled', '0');
         script.setAttribute('data-emit-metadata', '0');
         script.setAttribute('data-input-position', 'bottom');
-        script.setAttribute('data-theme', 'preferred_color_scheme');
+        script.setAttribute('data-theme', getEffectiveTheme());
         script.setAttribute('data-lang', 'ar');
-
         ref.current.appendChild(script);
+
+        const observer = new MutationObserver(() => {
+            const iframe = ref.current?.querySelector('iframe.giscus-frame');
+
+            if (iframe) {
+                sendThemeToGiscus(getEffectiveTheme());
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(ref.current, {
+            childList: true,
+            subtree: true,
+        });
+        return () => observer.disconnect();
     }, []);
 
     useEffect(() => {
@@ -71,7 +82,9 @@ export default function Comments() {
             }
         };
         mql.addEventListener('change', handler);
-        return () => mql.removeEventListener('change', handler);
+        return () => {
+            mql.removeEventListener('change', handler);
+        };
     }, []);
 
     return <div ref={ref} className="giscus-container" />;

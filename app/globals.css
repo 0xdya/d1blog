@@ -351,7 +351,7 @@ a {
 
 .article {
   padding-block-start: var(--space-6);
-  padding-block-end: var(--space-9);
+  /* padding-block-end: var(--space-9); */
 }
 
 .article-title {
@@ -693,3 +693,23 @@ button:focus-visible {
     transition: none !important;
   }
 }
+
+.github-corner{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0 ;
+}
+.github-corner svg {
+  display: block;
+}
+.octocat-svg{
+  fill: var(--bg);
+}
+.gh-corner-bg{
+  fill: var(--text);
+}
+/* .github-corner svg {
+
+   color: #fff
+} */
