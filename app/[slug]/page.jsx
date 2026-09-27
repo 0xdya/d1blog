@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import ScrollTopButton from '@/components/ScrollTopButton';
 import TableOfContents from '@/components/TableOfContents';
 import CodeBlocks from '@/components/CodeBlocks';
+import Comments from '@/components/Comments';
 import { site } from '@/lib/site';
 import { Clock3, PencilLine } from 'lucide-react';
 
@@ -84,6 +85,7 @@ export default async function ArticlePage({ params }) {
 
         <article className="prose">
           <CodeBlocks html={post.contentHtml} />
+          <Comments />
         </article>
       </main>
 
