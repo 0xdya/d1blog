@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Handjet:wght,ELSH@100..900,2&family=Noto+Sans+Arabic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
 
 /* @font-face {
   font-family: 'tstfont';
@@ -122,7 +124,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font);
+  font-family: "Vazirmatn";
   font-size: var(--text-base);
   line-height: 1.9;
   -webkit-font-smoothing: antialiased;
